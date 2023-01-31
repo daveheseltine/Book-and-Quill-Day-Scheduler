@@ -1,3 +1,8 @@
+// # Define Data:
+// ## Sound Effects
+var sfxSave = new Audio("assets/sfx/save.wav");
+
+
 // # Define Global Variables.
 // You can edit the start/end times presented on the webpage!:
 var start = 9;
@@ -76,5 +81,6 @@ $(document).ready(function () {
   // ## Save Button group:
   $(".saveBtn").on("click", function () {
     localStorage.setItem($(this).parent().attr("id"), $(this).siblings(".description").val());
+    sfxSave.play();
   });
 });
