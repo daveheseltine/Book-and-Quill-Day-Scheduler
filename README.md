@@ -1,38 +1,19 @@
-# Book and Quill Day Scheduler (Trilogy Skills Bootcamp: Week 07 - Challenge)
+# Third-Party APIs: Work Day Scheduler
 
-## Important Notes
-As the course content this week was focussed on JavaScript, without directly editing the HTML or CSS files, I decided my personal goal for this challenge was to reflect what we had learnt by working purely in Javascript.
+## Your Task
 
-<br>
+Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-___
-## Student
-David Heseltine
-> **Note**: Apologies for any inconvenience caused by my GitHub Username 'lulose', as I am using my account that predates the course.
+You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 
-</br>
-
-___
-## Description
-This week's task was to create a simple calendar application that allows a user to save events for each hour of the day, by modifying starter code. This app runs in the browser and features dynamically updated HTML and CSS powered by jQuery.
-
-I implemented the [Moment.js](https://momentjs.com/) library to work with date and time.<a href="#references">*[1]*</a>
-
-</br>
-
-___
-## User Story 
+## User Story
 
 ```md
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 ```
-<a href="#references">*[1]*</a>
 
-</br>
-
-___
 ## Acceptance Criteria
 
 The app should:
@@ -47,26 +28,60 @@ The app should:
 
 * Save the event in local storage when the save button is clicked in that timeblock.
 
-* Persist events between refreshes of a page.<a href="#references">*[1]*</a>
-
-</br>
-
-___
-## Mock-Up
+* Persist events between refreshes of a page
 
 The following animation demonstrates the application functionality:
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./assets/img/05-third-party-apis-homework-demo.gif)<a href="#references">*[1]*</a>
+![A user clicks on slots on the color-coded calendar and edits the events.](./images/05-third-party-apis-homework-demo.gif)
 
-</br>
 
-___
-## URL
-* The URL of the deployed application: https://lulose.github.io/Book-and-Quill-Day-Scheduler/
-* The URL of the GitHub Repository: https://github.com/lulose/Book-and-Quill-Day-Scheduler
+## Grading Requirements
 
-</br>
+This homework is graded based on the following criteria: 
 
-___
-## References
-1. Trilogy Skills Bootcamp (2022) *UK-VIRT-FE-PT-12-2022-U-LOLC/07-third-party-apis-module/04-planner-app-lesson/README.md*
+### Technical Acceptance Criteria: 40%
+
+* Satisfies all of the above acceptance criteria plus the following:
+
+  * Uses a date utility library to work with date and time
+
+### Deployment: 32%
+
+* Application deployed at live URL
+
+* Application loads with no errors
+
+* Application GitHub URL submitted
+
+* GitHub repo contains application code
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate
+
+* Application user interface style is clean and polished
+
+* Application resembles the mock-up functionality provided in the homework instructions
+
+### Repository Quality: 13%
+
+* Repository has a unique name
+
+* Repository follows best practices for file structure and naming conventions
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages
+
+* Repository contains quality README file with description, screenshot, and link to deployed application
+
+## Review
+
+You are required to submit the following for review:
+
+* The URL of the deployed application
+
+* The URL of the GitHub repository, with a unique name and a README describing the project
+
+---
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
