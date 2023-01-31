@@ -44,7 +44,7 @@ $(document).ready(function () {
   }
   , 1000));
 
-  // ## Generate HTML for the Time-Blocks:
+  // ## Generate HTML for the Time-Blocks, and load any data from local storage:
   for (var i = start; i < end; i++) {
     $(".container").append($("<div class='row time-block' id='hour" + [i] + "'></div>"));
     $("#hour" + [i])
@@ -52,6 +52,7 @@ $(document).ready(function () {
       .append($("<textarea class='col-md-10 col-8 description id='text" + [i] + "'></textarea>"))
       .append($("<button class='col-md-1 col-2 btn saveBtn'><i class='fas fa-save'></i></button>"))
     ;
+    $("#hour" + [i] + " .description").val(localStorage.getItem("hour" + [i]));
   }
 
   // ## Add styling to Time-Blocks and a footer:
@@ -69,4 +70,11 @@ $(document).ready(function () {
     "height": "40px",
     }
   );
+
+
+  // # Buttons
+  // ## Save Button group:
+  $(".saveBtn").on("click", function () {
+    localStorage.setItem($(this).parent().attr("id"), $(this).siblings(".description").val());
+  });
 });
