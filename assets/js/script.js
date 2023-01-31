@@ -39,9 +39,9 @@ $(document).ready(function () {
   $("#currentDay").text(moment().format("hh:mm A, dddd Do MMMM"));
 
   // ## After 1s, and every second thereafter, update the current time and detect if the correct colours are displayed (which will take effect if the current hour changes):
+  var prevColours;
   $(setInterval(function () {
     $("#currentDay").text(moment().format("hh:mm A, dddd Do MMMM"));
-    var prevColours;
     if (prevColours !== moment().hour()) {
       colours();
       prevColours = moment().hour();
