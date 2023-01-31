@@ -8,13 +8,39 @@ var end = 18;
 $(document).ready(function () {
 
 
-// # Initialise the webpage
+  // # Named Functions
+  // ## Function to set the colours of the Time Blocks:
+  function colours () {
+    $(".time-block").each(function () {
+      $(this)
+        .removeClass("past")
+        .removeClass("present")
+        .removeClass("future")
+      ;
+      var hour = parseInt($(this).attr("id").split("hour")[1]);
+      if (hour < moment().hour()) {
+        $(this).addClass("past");
+      } else if (hour === moment().hour()) {
+        $(this).addClass("present");
+      } else {
+        $(this).addClass("future");
+      }
+    });
+  }
+
+
+  // # Initialise the webpage
   // ## Set the clock to the current time:
   $("#currentDay").text(moment().format("hh:mm A, dddd Do MMMM"));
 
   // ## After 1s, and every second thereafter, update the current time and detect if the correct colours are displayed (which will take effect if the current hour changes):
   $(setInterval(function () {
     $("#currentDay").text(moment().format("hh:mm A, dddd Do MMMM"));
+    var prevColours;
+    if (prevColours !== moment().hour()) {
+      colours();
+      prevColours = moment().hour();
+    }
   }
   , 1000));
 
@@ -27,4 +53,20 @@ $(document).ready(function () {
       .append($("<button class='col-md-1 col-2 btn saveBtn'><i class='fas fa-save'></i></button>"))
     ;
   }
+
+  // ## Add styling to Time-Blocks and a footer:
+  colours();
+  $(".hour").css(
+    {
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center"
+    }
+  );
+  $("body").append($("<footer></footer>"));
+  $("footer").css(
+    {
+    "height": "40px",
+    }
+  );
 });
